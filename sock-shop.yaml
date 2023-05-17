@@ -10,6 +10,7 @@ metadata:
 
 
 
+
 ---
 apiVersion: apps/v1 # Deployment - Carts
 kind: Deployment
@@ -114,6 +115,7 @@ spec:
             - SETGID
             - SETUID
           readOnlyRootFilesystem: true
+          runAsUser: 1000
         volumeMounts:
         - mountPath: /tmp
           name: tmp-volume
