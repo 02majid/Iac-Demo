@@ -11,6 +11,7 @@ metadata:
 
 
 
+
 ---
 apiVersion: apps/v1 # Deployment - Carts
 kind: Deployment
@@ -612,6 +613,7 @@ spec:
             - SETUID
             - DAC_OVERRIDE
           readOnlyRootFilesystem: true
+          runAsUser: 1000
 ---
 apiVersion: v1 # Service - rabbitmq
 kind: Service
