@@ -8,6 +8,7 @@ metadata:
 
 
 
+
 ---
 apiVersion: apps/v1 # Deployment - Carts
 kind: Deployment
@@ -923,3 +924,5 @@ spec:
           requests:
             cpu: 100m
             memory: 50Mi
+        securityContext:
+          runAsUser: 1000
